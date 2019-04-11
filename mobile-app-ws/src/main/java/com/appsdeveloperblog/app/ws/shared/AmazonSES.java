@@ -84,8 +84,12 @@ public class AmazonSES {
 
 	}
 	
+	
+	
 	public boolean sendPasswordResetRequest(String firstName, String email, String token)
 	  {
+		  // set my aws accesskeyid and secretkey
+		
 		  System.setProperty("aws.accessKeyId", "AKIAYD3EDJIVPZS35PMR"); 
 		  System.setProperty("aws.secretKey", "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"); 
 	      boolean returnValue = false;
