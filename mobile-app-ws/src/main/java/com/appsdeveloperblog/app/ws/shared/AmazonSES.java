@@ -36,7 +36,7 @@ public class AmazonSES {
 	final String TEXTBODY = "Please verify your email address. "
 			+ "Thank you for registering with our mobile app. To complete registration process and be able to log in,"
 			+ " open then the following URL in your browser window: "
-			+ " http://ec2-54-145-252-12.compute-1.amazonaws.com:8080/verification-service/email-verification.html?token=$tokenValue"
+			+ " http:///verification-service/email-verification.html?token=$tokenValue"
 			+ " Thank you! And we are waiting for you inside!";
 	
 	
@@ -54,15 +54,15 @@ public class AmazonSES {
 		      + "Hi, $firstName! "
 		      + "Someone has requested to reset your password with our project. If it were not you, please ignore it."
 		      + " otherwise please open the link below in your browser window to set a new password:" 
-		      + " http://ec2-54-145-252-12.compute-1.amazonaws.com:8080/verification-service/password-reset.html?token=$tokenValue"
+		      + " http://8080/verification-service/password-reset.html?token=$tokenValue"
 		      + " Thank you!";
 	
 
 	public void verifyEmail(UserDto userDto) {
 
 		// You can also set your keys this way. And it will work!
-		System.setProperty("aws.accessKeyId", "AKIAYD3EDJIVPZS35PMR"); 
-		System.setProperty("aws.secretKey", "5xIk0WfZSn32XbJJMy+04RrYh9HF8hLhgMs8jPjH"); 
+		System.setProperty(""); 
+		System.setProperty(""); 
 		
 		AmazonSimpleEmailService client = AmazonSimpleEmailServiceClientBuilder.standard().withRegion(Regions.US_EAST_1)
 				.build();
